@@ -1,0 +1,15 @@
+<html>
+<head>
+
+</head>
+<body bgcolor="red">
+<pre>
+<h2>
+AS WE KNOW THAT FOOD IS VERY IMPORTANT THING IN EVERY ONES LIFE.
+WE PROVIDE GOOD FOODS TO THE STUDENT SO THAT THEY FEEL MENTALY AND PHYSICALLY
+WELL.AND PRICES WILL BE APPLIED AS THEY EAT. <h2>
+<a href=main.php>HOME
+</pre>
+</body>
+</html>
+
