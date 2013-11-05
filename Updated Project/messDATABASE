@@ -1,0 +1,114 @@
+-- phpMyAdmin SQL Dump
+-- version 3.3.9
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Oct 22, 2013 at 07:22 AM
+-- Server version: 5.5.8
+-- PHP Version: 5.3.5
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Database: `mess`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `mealtable`
+--
+
+CREATE TABLE IF NOT EXISTS `mealtable` (
+  `Roll_No` int(11) NOT NULL,
+  `Mess_Id` int(11) NOT NULL,
+  `Breakfast` int(11) NOT NULL,
+  `Lunch` int(11) NOT NULL,
+  `Snacks` int(11) NOT NULL,
+  `Dinner` int(11) NOT NULL,
+  KEY `Roll_No` (`Roll_No`),
+  KEY `Breakfast` (`Breakfast`,`Lunch`,`Snacks`,`Dinner`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `mealtable`
+--
+
+INSERT INTO `mealtable` (`Roll_No`, `Mess_Id`, `Breakfast`, `Lunch`, `Snacks`, `Dinner`) VALUES
+(205112057, 102, 3, 3, 4, 3),
+(205112056, 101, 3, 4, 1, 4),
+(205112058, 103, 0, 0, 0, 1),
+(205112060, 105, 0, 1, 0, 1),
+(205112068, 107, 1, 1, 1, 0),
+(205112064, 64, 1, 0, 0, 0),
+(205112063, 63, 1, 1, 1, 1),
+(205112066, 66, 0, 0, 0, 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `messdetail`
+--
+
+CREATE TABLE IF NOT EXISTS `messdetail` (
+  `Roll_No` int(12) NOT NULL,
+  `Mess_Id` int(11) NOT NULL,
+  `Mess_Name` varchar(10) NOT NULL,
+  PRIMARY KEY (`Mess_Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `messdetail`
+--
+
+INSERT INTO `messdetail` (`Roll_No`, `Mess_Id`, `Mess_Name`) VALUES
+(205112061, 61, 'Mega_Mess1'),
+(205112062, 62, 'Mega_Mess1'),
+(205112063, 63, 'Mega_Mess1'),
+(205112064, 64, 'Mega_Mess1'),
+(205112065, 65, 'Mega_Mess1'),
+(205112066, 66, 'Mega_Mess1'),
+(205112067, 67, 'Mega_Mess1'),
+(205112056, 101, 'Mega_Mess1'),
+(205112057, 102, 'Mega_Mess2'),
+(205112058, 103, 'Mega_Mess1'),
+(205112059, 104, 'B_Mess1'),
+(205112060, 105, 'B_Mess1'),
+(205112068, 107, 'Mega_Mess1');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `messstudent`
+--
+
+CREATE TABLE IF NOT EXISTS `messstudent` (
+  `Roll_No` int(12) NOT NULL,
+  `Name` varchar(15) NOT NULL,
+  PRIMARY KEY (`Roll_No`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `messstudent`
+--
+
+INSERT INTO `messstudent` (`Roll_No`, `Name`) VALUES
+(205112056, 'nitin'),
+(205112057, 'raju'),
+(205112058, 'nag'),
+(205112059, 'satym'),
+(205112060, 'rajiv'),
+(205112061, 'romon'),
+(205112062, 'ABS'),
+(205112063, 'vijay'),
+(205112064, 'pahadhi'),
+(205112065, 'arun'),
+(205112066, 'shruti'),
+(205112067, 'mali'),
+(205112068, 'sapan');
